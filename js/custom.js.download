@@ -1,0 +1,28 @@
+$(document).ready(function(){
+
+
+	var fix = (function (){
+		//$('.home-slider ul.slides li').height($(document).height() - $('header').height() );
+	})();
+
+	$(window).resize(fix);
+
+	if($('.flexslider.home-slider').length){
+
+		$('.flexslider.home-slider').flexslider({			
+			controlNav:false,
+			after:function(slider){
+				console.log(slider);
+			}
+
+		});
+
+	}
+});
+
+
+$(window).on('load',function(){
+	$('.about-top img').animate({'margin':'40px 0 -25px -50px'},1800,'easeOutBounce');
+	$('div.about-top').animate({'background-position-x':'-10%'},1800,'easeOutSine');
+	
+});
